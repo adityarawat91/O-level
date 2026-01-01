@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>O Level Study - Aditya</title>
+<title>My Website</title>
+
+<style>
+body{
+  font-family: Arial;
+  text-align: center;
+}
+.section{
+  display: none;
+  margin-top: 20px;
+}
+button{
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 18px;
+}
+</style>
+
+<script>
+function showHome(){
+  document.getElementById("home").style.display="block";
+  document.getElementById("about").style.display="none";
+  document.getElementById("contact").style.display="none";
+}
+function showAbout(){
+  document.getElementById("home").style.display="none";
+  document.getElementById("about").style.display="block";
+  document.getElementById("contact").style.display="none";
+}
+function showContact(){
+  document.getElementById("home").style.display="none";
+  document.getElementById("about").style.display="none";
+  document.getElementById("contact").style.display="block";
+}
+</script>
+
 </head>
-<body style="font-family:Arial; background:#f2f2f2; padding:15px;">
+<body onload="showHome()">
 
-  <h1 style="color:blue;">O Level Study</h1>
-  <p>Free Notes, MCQ, PDF – M1, M2, M3</p>
+<button onclick="showHome()">Home</button>
+<button onclick="showAbout()">About</button>
+<button onclick="showContact()">Contact</button>
 
-  <div style="background:white; padding:15px; border-radius:10px;">
-    <h2>M1-R5 (IT Tools)</h2>
-    <p>Notes, PDF, MCQ</p>
-  </div>
+<div id="home" class="section">
+  <h1>Welcome to My Website</h1>
+  <p>This is Home Page</p>
+</div>
 
-  <br>
+<div id="about" class="section">
+  <h1>About Us</h1>
+  <p>This is About Section</p>
+</div>
 
-  <div style="background:white; padding:15px; border-radius:10px;">
-    <h2>M2-R5 (Web Design)</h2>
-    <p>HTML, CSS, JavaScript</p>
-  </div>
-
-  <br>
-
-  <div style="background:white; padding:15px; border-radius:10px;">
-    <h2>M3-R5 (Python / IoT)</h2>
-    <p>Python basics, Programs</p>
-  </div>
-
-  <br>
-  <p>Website by Aditya Rawat</p>
+<div id="contact" class="section">
+  <h1>Contact Us</h1>
+  <p>Mobile: 1234567890</p>
+</div>
 
 </body>
 </html>
